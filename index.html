@@ -1,1 +1,188 @@
-<p>coming soon<p>
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Weakly-Supervised Domain Adaptation</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Niklas Hanselmann">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="icon" type="image/png" href="data/icon.png"/> -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div class="section">
+            <h1 class="project-title">
+                !!! PAGE UNDER CONSTRUCTION !!! <br />
+                Learning Cascaded Detection Tasks with <br />
+                Weakly-Supervised Domain Adaptation
+            </h1>
+            <div class="authors">
+                <a href=https://scholar.google.com/citations?user=hm2FFlsAAAAJ&hl=en>
+                    Niklas Hanselmann <sup>1,2</sup>
+                </a>
+                <a href=https://www.nick-schneider.me/>
+                    Nick Schneider <sup>1</sup>
+                </a>
+                <a href="">
+                    Benedikt Ortelt <sup>3</sup>
+                </a>
+                <a href=http://cvlibs.net/>
+                    Andreas Geiger <sup>2,4</sup>
+                </a>
+            </div>
+
+            <div class="affiliations">
+                <span><sup>1</sup> Mercdes-Benz AG R&D</span>
+                <span><sup>2</sup> University of Tübingen</span>  <br/>
+                <span><sup>3</sup> Robert Bosch GmbH</span> 
+                <span><sup>4</sup> Max Planck Institute for Intelligent Systems Tübingen</span>
+            </div>
+
+            <div class="project-conference">
+                IV 2021
+            </div>
+
+            <div class="project-icons">
+                <!-- TODO: add relevant links -->
+                <a href="">
+                    <i class="fa fa-file"></i> <br/>
+                    Paper
+                </a>
+                <a href="">
+                    <i class="fa fa-database"></i> <br/>
+                    Supplementary
+                </a>
+                <a href="">
+                    <i class="fa fa-youtube-play"></i> <br/>
+                    Video
+                </a>
+                <a href="">
+                    <i class="fa fa-file-powerpoint-o"></i> <br/>
+                    Slides
+                </a>
+                </a>
+                <!-- TODO: add blog
+                <a href="https://autonomousvision.github.io/superquadrics-revisited/">
+                    <i class="fa fa-newspaper-o"></i> <br/>
+                    Blog
+                </a>
+                -->
+            </div>
+
+            <div class="teaser-image">
+                <img src="data/figures/teaser.png">
+                <span>
+                    <b>TL:DR:</b> We propose a weakly-supervised domain-adaptation setting that 
+                    enables learning cascaded detection tasks at a reduced 
+                    annotation effort  while still achieving competitive 
+                    performance by utilizing weak 2D bounding box labels in 
+                    both domains.
+                </span>
+            </div>
+
+            <div class="section-title">Abstract </div>
+            <div class="abstract">
+                In order to handle the challenges of autonomous driving, deep 
+                learning has proven to be crucial in tackling increasingly 
+                complex tasks, such as 3D detection or instance segmentation. 
+                State-of-the-art approaches for image-based detection tasks tackle 
+                this complexity by operating in a cascaded fashion: they first 
+                extract a 2D bounding box based on which additional attributes, 
+                e.g. instance masks, are inferred. While these methods perform 
+                well, a key challenge remains the lack of accurate and cheap 
+                annotations for the growing variety of tasks. Synthetic data 
+                presents a promising solution but, despite the effort in domain 
+                adaptation research, the gap between synthetic and real data 
+                remains an open problem. In this work, we propose a weakly 
+                supervised domain adaptation setting which exploits the structure 
+                of cascaded detection tasks. In particular, we learn to infer 
+                the attributes solely from the source domain while leveraging
+                2D bounding boxes as weak labels in both domains to explain 
+                the domain shift. We further encourage domain-invariant features 
+                through class-wise feature alignment using ground-truth
+                class information, which is not available in the unsupervised 
+                setting. As our experiments demonstrate, the approach is 
+                competitive with fully supervised settings while outperforming 
+                unsupervised adaptation approaches by a large margin.
+            </div>
+
+            <div class="section-title">A Weakly-Supervised Domain Adaptation Setting </div>
+            <div class="video">
+                <iframe width="560" height="315" src="data/IV_talk.mp4#t=0.5" frameborder="0" preload="metadata" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                 </iframe>
+            </div>
+            
+            <!--
+            <div class="content">
+                <p> 
+                    We propose a setting which exploits the 
+                    decomposability of complex detection tasks into a cascaded 
+                    structure. This concept is central to many image-based 
+                    detection approaches where objects are first detected and, 
+                    based on the detection, additional attributes such as instance 
+                    masks or 2D/3D poses are inferred.
+                    Likewise, labeling can now also be decomposed into 2D bounding 
+                    box labels, which are inexpensive to annotate and for which 
+                    annotated datasets already exist in many domains, and 
+                    additional, more complex attribute labels, which are often 
+                    expensive or difficult to obtain with sufficient accuracy. 
+                    Motivated by this, we investigate the use of weak supervision 
+                    in the form of 2D bounding box annotations in the target domain 
+                    in conjunction with full supervision in the source domain. 
+                </p>
+                
+                <p>
+                    In this setting, the available weak supervision can be 
+                    leveraged 
+                </p>
+            </div>
+            -->
+            <!-- TODO: Should we add these? Currently I'd tend to leave them for the full paper.
+            <div class="section-title">Quantitative Results</div>
+                <div class="content">
+                    What is the experiment setup? Then some latex tables.
+                </div>
+                <img src="data/figures/dummypath.png" style="width:90%;">
+                <div class="content">
+                    A bit of conclusion and interpretation.
+                </div>
+            -->
+            <div class="section-title">Qualitative Results</div>
+                <div class="content">
+                    Below we show a qualitative comparison of models trained in
+                    our setting to models trained on the source domain only 
+                    without any adaptation and models trained using an unsupervised
+                    domain adaptation method for object detection 
+                    (<a href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_Domain_Adaptive_Faster_CVPR_2018_paper.pdf">DAFRCNN, Chen et al.</a>) 
+                    on the cascaded detection tasks of monocular 3D detection 
+                    and instance segmentation.
+                </div>
+                <div class="image-heading">
+                    Monocular 3D Detection
+                </div>
+                <img src="data/figures/box3d_comparison.png" style="width:90%;">
+                <div class="image-heading">
+                    Instance Segmentation
+                </div>
+                <img src="data/figures/instance_seg_comparison.png" style="width:90%;">
+            <div class="section-title">Acknowledgements</div>
+            <div class="content">
+                <p>
+                    This publication was created as part of the research project 
+                    "KI Delta Learning" (project number: 19A19013A) funded by the 
+                    Federal Ministry for Economic Affairs and Energy (BMWi) on the 
+                    basis of a decision by the German Bundestag.
+                </p>
+                <p>
+                    The template for this website was borrowed and adapted from 
+                    <a href="https://paschalidoud.github.io/">Despoina Paschalidou</a>.
+                </p>
+            </div>
+            </div>
+        </div>
+    </body>
